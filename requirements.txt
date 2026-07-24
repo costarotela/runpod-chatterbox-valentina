@@ -1,12 +1,3 @@
-conformer
-s3tokenizer
-librosa
-resemble-perth
-huggingface_hub
-safetensors
-transformers
-diffusers
-torchaudio
-torchvision
-einops
 runpod>=1.7.7
+librosa
+soundfile
