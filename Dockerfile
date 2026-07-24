@@ -14,6 +14,7 @@ RUN pip install --no-cache-dir "chatterbox-tts[multilingual] @ git+https://githu
 WORKDIR /
 COPY requirements.txt /requirements.txt
 RUN pip install --no-cache-dir --ignore-installed -r requirements.txt
+RUN pip install --no-cache-dir --ignore-installed "runpod>=1.7.7"
 COPY rp_handler.py /
 
 # Start the container (model downloads on first worker boot)
