@@ -1,4 +1,4 @@
-FROM runpod/pytorch:2.8.0-py3.11-cuda12.8.1-cudnn-devel-ubuntu22.04
+FROM runpod/pytorch:2.9.0-py3.11-cuda13.0.1-cudnn-devel-ubuntu24.04
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
@@ -17,6 +17,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY rp_handler.py /
 
 # Start the container (model downloads on first worker boot)
-
+CMD ["python3", "-u", "rp_handler.py"]
 # Start the container
 CMD ["python3", "-u", "rp_handler.py"]
