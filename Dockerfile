@@ -1,4 +1,4 @@
-FROM runpod/pytorch:2.9.0-py3.11-cuda13.0.1-cudnn-devel-ubuntu24.04
+FROM runpod/pytorch:1.0.7-rc.138-cu1300-torch291-ubuntu2404
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
