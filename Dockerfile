@@ -16,8 +16,7 @@ COPY requirements.txt /requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 COPY rp_handler.py /
 
-# Pre-download model weights (bakes them into image, no cold-start download)
-RUN python -c "from chatterbox.mtl_tts import ChatterboxMultilingualTTS; model = ChatterboxMultilingualTTS.from_pretrained(device='cuda')"
+# Start the container (model downloads on first worker boot)
 
 # Start the container
 CMD ["python3", "-u", "rp_handler.py"]
